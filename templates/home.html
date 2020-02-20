@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block content %}
+{% if posts %}
+    {% for post in posts %}
+        <div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.content }}</p>
+            <p>Author: {{ post.name.first }} {{ post.name.last }}</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>There are no posts to display.</p>
+{% endif %}
+{% endblock %}
+
