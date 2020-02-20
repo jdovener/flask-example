@@ -5,7 +5,7 @@
         <div>
             <h3>{{ post.title }}</h3>
             <p>{{ post.content }}</p>
-            <p>Author: {{ post.name.first }} {{ post.name.last }}</p>
+            <p>Author: {{ post.first_name }} {{ post.last_name }}</p>
         </div>
     {% endfor %}
 {% else %}
