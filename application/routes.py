@@ -64,3 +64,10 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
+@app.route('/post/delete/<id>')
+@login_required
+def delete_post_by_id(id):
+    post = Post.query.filter_by(id=id).first()
+    db.session.delete(post)
+    db.session.commit()
+    return redirect(url_for('home'))
