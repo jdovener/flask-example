@@ -9,7 +9,6 @@ ExecStart=/bin/bash \
 	python ./app.py'
 Environment=SECRET_KEY={{SECRET_KEY}}
 Environment=DATABASE_URI=mysql+pymysql://{{MYSQL_USER}}:{{MYSQL_PASSWORD}}@{{MYSQL_HOST}}/{{MYSQL_DATABASE}}
-#PassEnvironment=SECRET_KEY DATABASE_URI
 [Install]
 WantedBy=multi-user.target
 
